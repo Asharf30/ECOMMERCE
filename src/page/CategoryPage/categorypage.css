@@ -1,0 +1,34 @@
+/* Category & Search Results — product grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.categgory_products {
+  padding-bottom: 60px;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}

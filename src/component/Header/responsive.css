@@ -1,0 +1,402 @@
+/* =============================================
+   RESPONSIVE STYLES — Desktop-first approach
+   Breakpoints: max-width 1023px (tablet), max-width 767px (mobile)
+   ============================================= */
+
+/* ——————————————————————————————
+   BASE / DESKTOP DEFAULTS
+   —————————————————————————————— */
+
+/* Hide mobile-only elements on desktop */
+.btm_header .mobile_top_bar {
+  display: none;
+}
+
+.btm_header .hamburger_btn {
+  display: none;
+}
+
+/* ——————————————————————————————
+   TABLET (max-width: 1023px)
+   —————————————————————————————— */
+@media (max-width: 1023px) {
+  .container {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Search bar — responsive stretch on tablet */
+  .searchBox_container {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .top_header .container form {
+    width: 100%;
+    display: flex;
+  }
+
+  .top_header .container form input {
+    flex: 1;
+    width: 100% !important;
+    min-width: 0;
+  }
+
+  /* Tighter nav padding */
+  .btm_header .nav_links li {
+    padding: 0 14px;
+  }
+
+  /* Category nav narrower */
+  .btm_header .category_nav {
+    width: 185px;
+    min-width: 185px;
+  }
+
+  /* ---- Slider (tablet) ---- */
+  .hero .mySwiper {
+    min-height: 280px !important;
+    overflow: hidden !important;
+  }
+
+  .hero .swiper-slide {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 20px !important;
+    height: auto !important;
+    overflow: hidden !important;
+  }
+
+  .hero .swiper-slide .content {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    text-align: left !important;
+    padding: 0 20px !important;
+    max-width: 55% !important;
+    width: 55% !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hero .swiper-slide img.slider_img {
+    width: 45% !important;
+    max-width: 45% !important;
+    height: auto !important;
+    max-height: 220px !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+  }
+
+  /* ---- Product Grid (tablet: 3 columns) ---- */
+  .productSwiper {
+    --swiper-slides: 3;
+  }
+}
+
+/* ——————————————————————————————
+   MOBILE (max-width: 767px)
+   —————————————————————————————— */
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* ==========================================
+     SLIDER DOTS — push dots down so they don't
+     stick to the content on mobile
+     ========================================== */
+  .hero .mySwiper {
+    padding-bottom: 36px !important;
+  }
+
+  .hero .swiper-pagination {
+    bottom: 8px !important;
+  }
+
+  /* ==========================================
+     TOP HEADER — two-row layout on mobile
+     ========================================== */
+  .top_header .container {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .top_header .container .logo {
+    width: 110px;
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+
+  /* Search goes to its own full-width row */
+  .searchBox_container {
+    order: 3;
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .searchBox_container form {
+    width: 100%;
+    display: flex;
+  }
+
+  .top_header .container form input {
+    flex: 1;
+    width: 100% !important;
+    height: 42px;
+    font-size: 14px;
+    border-radius: 30px 0 0 30px;
+    min-width: 0;
+  }
+
+  .top_header .container form button {
+    width: 52px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 0 30px 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Icons (heart + cart) stay on the same row as logo */
+  .top_header .header-icons {
+    flex-shrink: 0;
+  }
+
+  /* ==========================================
+     BOTTOM HEADER — hamburger layout
+     ========================================== */
+  .btm_header .container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 14px;
+    position: relative;
+    gap: 0;
+  }
+
+  /* Show mobile bar (just the hamburger) */
+  .btm_header .mobile_top_bar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  /* Hamburger button */
+  .btm_header .hamburger_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+
+  .btm_header .hamburger_btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  /* Category nav — full width on mobile */
+  .btm_header .category_nav {
+    display: block !important;
+    width: 100% !important;
+    min-width: unset !important;
+    margin-top: 0;
+    border-right: none;
+  }
+
+  .btm_header .category_nav .category_btn {
+    width: 100%;
+    padding: 10px 12px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  /* Nav: hidden until hamburger clicked */
+  .btm_header .nav {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: linear-gradient(135deg, #7c3aed, #ec4899) !important;
+    z-index: 999 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    max-height: 0 !important;
+    transition: max-height 0.4s ease-in-out !important;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .btm_header .nav.mobile_open {
+    max-height: 400px !important;
+  }
+
+  .btm_header .nav_links {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: auto;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .btm_header .nav_links li {
+    padding: 0;
+    height: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .btm_header .nav_links li.active {
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: none;
+  }
+
+  .btm_header .nav_links li a {
+    display: block;
+    width: 100%;
+    padding: 13px 18px;
+    font-size: 16px;
+  }
+
+  /* ==========================================
+     HERO SLIDER — mobile: show only text, hide image
+     ========================================== */
+  .hero {
+    padding-top: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+
+  .hero .mySwiper {
+    min-height: auto !important;
+    overflow: hidden !important;
+  }
+
+  .hero .swiper-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 30px 20px !important;
+    gap: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Hide the product image on mobile — keeps slider clean */
+  .hero .swiper-slide img.slider_img {
+    display: none !important;
+  }
+
+  .hero .swiper-slide .content {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    padding: 0 !important;
+  }
+
+  .hero .swiper-slide .content h4 {
+    display: none;
+  }
+
+  .hero .swiper-slide .content h3 {
+    font-size: clamp(1.4rem, 6vw, 2rem) !important;
+    margin-bottom: 10px !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero .swiper-slide .content p {
+    font-size: 14px !important;
+    margin: 8px 0 16px !important;
+    color: var(--color-paragraph);
+  }
+
+  .hero .swiper-slide .content .btn {
+    display: inline-flex !important;
+  }
+
+  /* ==========================================
+     PRODUCT GRID — mobile: 2 columns
+     ========================================== */
+  .products {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  /* Product card smaller on mobile */
+  .Product {
+    max-width: 100%;
+    padding: 14px 10px;
+    margin-bottom: 0;
+  }
+
+  .Product .img_product {
+    height: 130px;
+    padding: 0 8px;
+    margin-bottom: 10px;
+  }
+
+  .Product .img_product img {
+    height: 110px;
+  }
+
+  .Product .name_product {
+    font-size: 12px;
+  }
+
+  .Product .price {
+    font-size: 16px;
+  }
+
+  .Product .stars svg {
+    font-size: 13px;
+  }
+
+  /* Product swiper on mobile: 2 slides visible */
+  .slide_products {
+    padding: 0 10px;
+  }
+
+  /* Favorites grid */
+  .favorites_grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+}
+
+/* ——————————————————————————————
+   SMALL MOBILE (max-width: 400px)
+   —————————————————————————————— */
+@media (max-width: 400px) {
+  .products {
+    grid-template-columns: 1fr !important;
+  }
+
+  .favorites_grid {
+    grid-template-columns: 1fr !important;
+  }
+}

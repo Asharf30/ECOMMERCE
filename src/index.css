@@ -1,0 +1,218 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-dm: "DM Sans", sans-serif;
+
+  /* 🎨 الباليت الجديد — Purple + Amber */
+  --color-primary: #7C3AED;
+  /* بنفسجي رئيسي */
+  --color-primary-dark: #5B21B6;
+  /* بنفسجي داكن للـ hover */
+  --color-secondary: #F59E0B;
+  /* برتقالي ذهبي */
+  --color-accent: #EC4899;
+  /* وردي مميز */
+  --color-background: #F5F3FF;
+  /* خلفية فاتحة بنفسجية */
+  --color-white: #ffffff;
+  --color-surface: #FFFFFF;
+
+  /* ألوان النصوص */
+  --color-heading: #1E1B4B;
+  --color-paragraph: #6B7280;
+
+  /* الحدود */
+  --color-border-custom: #DDD6FE;
+
+  /* الـ Gradients */
+  --gradient-hero: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
+  --gradient-btn: linear-gradient(135deg, #7C3AED, #A855F7);
+  --gradient-card: linear-gradient(135deg, #F5F3FF, #EDE9FE);
+}
+
+html {
+  /* Prevent smooth-scroll from fighting ScrollToTop on route change */
+  scroll-behavior: auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: var(--color-background);
+  color: var(--color-heading);
+  /* Never let body itself be a scroll container — scroll lives on window */
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+  font-family: var(--font-dm);
+}
+
+span {
+  color: var(--color-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-heading);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ==============================
+   BUTTONS
+   ============================== */
+.btn {
+  padding: 11px 22px;
+  width: fit-content;
+  text-transform: capitalize;
+  border-radius: 30px;
+  cursor: pointer;
+  background: var(--gradient-btn);
+  color: var(--color-white);
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  transition: 0.3s;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+}
+
+/* ==============================
+   PRODUCTS GRID (shared)
+   ============================== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* ==============================
+   PAGE HEADER (shared across pages)
+   ============================== */
+.page_hero {
+  background: var(--gradient-hero);
+  padding: 60px 0;
+  text-align: center;
+  color: white;
+  margin-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page_hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+}
+
+.page_hero h1 {
+  color: white;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.page_hero p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  position: relative;
+}
+
+/* ==============================
+   SECTION TITLE (shared)
+   ============================== */
+.section_title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section_title h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--color-heading);
+  margin-bottom: 12px;
+}
+
+.section_title p {
+  color: var(--color-paragraph);
+  font-size: 1.05rem;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.section_title .line {
+  width: 70px;
+  height: 4px;
+  background: var(--gradient-btn);
+  border-radius: 4px;
+  margin: 14px auto 0;
+}
+
+/* ==============================
+   UTILITY
+   ============================== */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--color-primary);
+}
+
+/* ==============================
+   RESPONSIVE - Tab & Mobile overrides
+   ============================== */
+@media (max-width: 1023px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+  }
+}

@@ -1,0 +1,298 @@
+/* ==============================
+   ABOUT PAGE
+   ============================== */
+
+/* Story Section */
+.about_story {
+  padding: 80px 0;
+}
+.story_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.story_content p {
+  color: var(--color-paragraph);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 18px;
+}
+.story_content .section_title {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Visual card */
+.story_visual {
+  display: flex;
+  justify-content: center;
+}
+.visual_card {
+  background: var(--gradient-hero);
+  border-radius: 24px;
+  padding: 50px 40px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.35);
+}
+.visual_card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+}
+.visual_icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.visual_icon svg { font-size: 36px; color: white; }
+.visual_card h3 { color: white; font-size: 22px; margin-bottom: 8px; }
+.visual_card p { color: rgba(255,255,255,0.8); margin-bottom: 24px; }
+.visual_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.visual_tags span {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Stats */
+.about_stats {
+  background: var(--gradient-hero);
+  padding: 70px 0;
+}
+.stats_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.stat_card {
+  text-align: center;
+  color: white;
+  padding: 30px 20px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s;
+}
+.stat_card:hover { transform: translateY(-6px); }
+.stat_icon { margin-bottom: 12px; }
+.stat_icon svg { font-size: 38px; color: var(--color-secondary); }
+.stat_value {
+  font-size: 42px;
+  font-weight: 900;
+  color: white;
+  font-family: var(--font-dm);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat_label {
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+}
+
+/* Mission & Vision */
+.about_mission {
+  padding: 80px 0;
+  background: var(--color-background);
+}
+.mv_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.mv_card {
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.mv_card.mission {
+  background: var(--color-white);
+  border: 2px solid var(--color-primary);
+}
+.mv_card.vision {
+  background: var(--gradient-hero);
+  color: white;
+}
+.mv_tag {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  color: var(--color-secondary);
+}
+.mv_card.vision .mv_tag { color: rgba(255,255,255,0.7); }
+.mv_card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--color-heading);
+}
+.mv_card.vision h3 { color: white; }
+.mv_card p {
+  color: var(--color-paragraph);
+  line-height: 1.7;
+  font-size: 15px;
+}
+.mv_card.vision p { color: rgba(255,255,255,0.85); }
+
+/* Values */
+.about_values { padding: 80px 0; }
+.values_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.value_card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border-custom);
+  border-radius: 18px;
+  padding: 36px 28px;
+  text-align: center;
+  transition: all 0.3s;
+  box-shadow: 0 2px 15px rgba(124, 58, 237, 0.05);
+}
+.value_card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15);
+  transform: translateY(-4px);
+}
+.value_icon {
+  width: 64px;
+  height: 64px;
+  background: var(--color-background);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  border: 2px solid var(--color-border-custom);
+  transition: all 0.3s;
+}
+.value_card:hover .value_icon {
+  background: var(--gradient-btn);
+  border-color: transparent;
+}
+.value_icon svg { font-size: 28px; color: var(--color-primary); }
+.value_card:hover .value_icon svg { color: white; }
+.value_card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 10px;
+}
+.value_card p {
+  color: var(--color-paragraph);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Team */
+.about_team {
+  padding: 80px 0;
+  background: var(--color-background);
+}
+.team_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.team_card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border-custom);
+  border-radius: 18px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.team_card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15);
+  transform: translateY(-5px);
+}
+.team_avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 16px;
+  border: 3px solid var(--color-primary);
+  padding: 3px;
+  background: var(--gradient-btn);
+}
+.team_avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.team_card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 6px;
+}
+.team_role {
+  display: inline-block;
+  background: rgba(124,58,237,0.1);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.team_card p {
+  color: var(--color-paragraph);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 1023px) {
+  .stats_grid { grid-template-columns: repeat(2, 1fr); }
+  .team_grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .story_grid { grid-template-columns: 1fr; }
+  .stats_grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .mv_grid { grid-template-columns: 1fr; }
+  .values_grid { grid-template-columns: 1fr; }
+  .team_grid { grid-template-columns: repeat(2, 1fr); }
+  .about_story,
+  .about_mission,
+  .about_values,
+  .about_team { padding: 50px 0; }
+  .about_stats { padding: 50px 0; }
+  .stat_value { font-size: 32px; }
+  .visual_card { max-width: 100%; }
+}

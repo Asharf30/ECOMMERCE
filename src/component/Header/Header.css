@@ -1,0 +1,326 @@
+/* ==============================
+   TOP HEADER
+   ============================== */
+.top_header {
+  width: 100%;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border-custom);
+}
+
+header {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 20px rgba(124, 58, 237, 0.08);
+}
+
+.top_header .container {
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.top_header .container .logo {
+  min-width: 100px;
+  width: 160px;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* Search */
+.top_header .container form input {
+  padding: 5px 15px 5px 20px;
+  width: 420px;
+  height: 44px;
+  background-color: var(--color-background);
+  border-radius: 30px 0 0 30px;
+  outline: none;
+  transition: 0.4s;
+  border: 2px solid transparent;
+  font-size: 14px;
+  color: var(--color-heading);
+}
+
+.top_header .container form input:focus {
+  border-color: var(--color-primary);
+  background-color: var(--color-white);
+}
+
+.top_header .container form button {
+  width: 75px;
+  height: 44px;
+  background: var(--gradient-btn);
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: none;
+  outline: none;
+}
+
+.top_header .container form button svg {
+  color: white;
+  fill: white;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Icons */
+.top_header .header-icons {
+  display: flex;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.top_header .icons {
+  position: relative;
+  cursor: pointer;
+}
+
+.top_header .icons a {
+  color: var(--color-heading);
+}
+
+.top_header .icons a svg {
+  color: var(--color-heading);
+}
+
+.top_header .icons span {
+  background: var(--gradient-btn);
+  color: white;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  line-height: 1;
+}
+
+/* ==============================
+   BOTTOM HEADER (NAVBAR)
+   ============================== */
+.btm_header {
+  width: 100%;
+  background: var(--gradient-hero);
+  position: relative;
+}
+
+.btm_header .container {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  height: 52px;
+  gap: 0;
+}
+
+/* Category dropdown */
+.btm_header .category_nav {
+  width: 230px;
+  min-width: 230px;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btm_header .category_nav .category_btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btm_header .category_nav .category_btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btm_header .category_nav .category_list {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border-custom);
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: 0.4s ease;
+  z-index: 1000;
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.15);
+}
+
+.btm_header .category_nav .category_list.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.btm_header .category_nav .category_list a {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--color-border-custom);
+  font-size: 14px;
+  color: var(--color-heading);
+  transition: background 0.2s, color 0.2s;
+}
+
+.btm_header .category_nav .category_list a:hover {
+  background: var(--color-background);
+  color: var(--color-primary);
+  padding-left: 24px;
+}
+
+/* Nav links */
+.btm_header .nav_links {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btm_header .nav_links li {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 22px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.btm_header .nav_links li:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.btm_header .nav_links li.active {
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: inset 0 -3px 0 var(--color-secondary);
+}
+
+.btm_header .nav_links li a {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+/* Desktop icons — hidden by default, shown only via responsive.css */
+.btm_header .header_icons {
+  display: none;
+  gap: 20px;
+  margin-left: auto;
+  flex-shrink: 0;
+  min-width: fit-content;
+  align-items: center;
+  padding-right: 6px;
+}
+
+.btm_header .header_icons svg {
+  font-size: 26px;
+  fill: var(--color-white);
+  color: white;
+  transition: opacity 0.2s;
+}
+
+.btm_header .header_icons svg:hover {
+  opacity: 0.8;
+}
+
+/* Mobile top bar */
+.btm_header .mobile_top_bar {
+  display: none;
+}
+
+/* Hamburger button */
+.btm_header .hamburger_btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* ==============================
+   SEARCH SUGGESTIONS
+   ============================== */
+.searchBox_container {
+  position: relative;
+  flex: 1;
+  max-width: 500px;
+}
+
+.suggetions {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.15);
+  z-index: 1200;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--color-border-custom);
+}
+
+.suggetions li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.suggetions li:hover {
+  background: var(--color-background);
+}
+
+.suggetions li:not(:last-child) {
+  border-bottom: 1px solid var(--color-border-custom);
+}
+
+.suggetions li img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+.suggetions li span {
+  display: block;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--color-heading);
+}

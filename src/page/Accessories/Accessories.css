@@ -1,0 +1,221 @@
+/* ==============================
+   ACCESSORIES PAGE
+   ============================== */
+.accessories_page { padding-bottom: 80px; }
+
+/* Layout */
+.accessories_layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 36px;
+  padding: 50px 0;
+  align-items: start;
+}
+
+/* Sidebar */
+.accessories_sidebar {
+  position: sticky;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar_section {
+  background: var(--color-white);
+  border: 1px solid var(--color-border-custom);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.sidebar_section h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Category buttons */
+.cat_filters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cat_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--color-border-custom);
+  background: transparent;
+  color: var(--color-heading);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-align: left;
+}
+
+.cat_btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: rgba(124, 58, 237, 0.04);
+}
+
+.cat_btn.active {
+  background: var(--gradient-btn);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.cat_count {
+  background: rgba(124, 58, 237, 0.12);
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  min-width: 26px;
+  text-align: center;
+}
+
+.cat_btn.active .cat_count {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+/* Price Range */
+.price_range_input {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 6px;
+  background: linear-gradient(to right, var(--color-primary) 0%, var(--color-border-custom) 0%);
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.price_range_input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.4);
+  border: 2px solid white;
+}
+
+.price_range_labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--color-paragraph);
+  margin-top: 4px;
+}
+
+/* Content area */
+.accessories_content { flex: 1; min-width: 0; }
+
+.acc_top_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border-custom);
+  border-radius: 14px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.acc_count {
+  font-size: 15px;
+  color: var(--color-paragraph);
+  margin: 0;
+}
+.acc_count strong { color: var(--color-primary); }
+
+.sort_group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort_group label {
+  font-size: 13px;
+  color: var(--color-paragraph);
+  font-weight: 600;
+}
+
+.sort_select {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--color-border-custom);
+  font-size: 13px;
+  color: var(--color-heading);
+  background: white;
+  cursor: pointer;
+  outline: none;
+  font-family: var(--font-inter);
+}
+
+.sort_select:focus {
+  border-color: var(--color-primary);
+}
+
+.acc_empty {
+  text-align: center;
+  padding: 60px;
+  color: var(--color-paragraph);
+  font-size: 16px;
+  background: var(--color-white);
+  border-radius: 18px;
+  border: 1px solid var(--color-border-custom);
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 1023px) {
+  .accessories_layout {
+    grid-template-columns: 220px 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .accessories_layout {
+    grid-template-columns: 1fr;
+  }
+  .accessories_sidebar {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 4px;
+  }
+  .sidebar_section {
+    min-width: 200px;
+    flex-shrink: 0;
+  }
+  .cat_filters {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 6px;
+  }
+  .cat_btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}

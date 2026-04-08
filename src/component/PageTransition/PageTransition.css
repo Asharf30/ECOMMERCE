@@ -1,0 +1,14 @@
+.fade-in-page {
+  animation: fadeInSlideDown 0.9s ease-out forwards;
+}
+
+@keyframes fadeInSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* بتبدأ من فوق */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* بتستقر في مكانها الطبيعي */
+  }
+}
