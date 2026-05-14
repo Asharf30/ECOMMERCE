@@ -2,7 +2,7 @@
 
 A single-page e-commerce frontend built with React, Vite, React Router, MUI, Swiper, and Context API.
 
-Live Demo:ecommerce-website-ashraf.netlify.app
+Live Demo: [ecommerce-website-ashraf.netlify.app](https://ecommerce-website-ashraf.netlify.app/)
 
 ## Architecture
 
