@@ -52,7 +52,6 @@ function ProductInfo({ product }) {
       <div className="details">
         <h1 className="name">{product?.title}</h1>
 
-        {/* خلينا النجوم لوحدها */}
         <div className="stars">
           <StarIcon />
           <StarIcon />
@@ -62,7 +61,6 @@ function ProductInfo({ product }) {
           <StarHalfIcon />
         </div>
 
-        {/* طلعنا باقي التفاصيل بره عشان نتحكم في مسافاتها براحتنا */}
         <p className="price">${product?.price}</p>
 
         <h5 className="info">
@@ -78,7 +76,6 @@ function ProductInfo({ product }) {
           Hurry Up! only <span>{product?.stock}</span> products left in stock
         </h5>
 
-        {/* جمعنا الأزرار في ديف واحد عشان نجيبهم جنب بعض */}
         <div className="actions">
           <button
             type="button"

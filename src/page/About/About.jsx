@@ -11,25 +11,29 @@ const teamMembers = [
   {
     name: "Ahmed Ashraf",
     role: "Founder & CEO",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ahmed&backgroundColor=b6e3f4",
+    avatar:
+      "https://api.dicebear.com/7.x/avataaars/svg?seed=Ahmed&backgroundColor=b6e3f4",
     bio: "10+ years in e-commerce and retail management.",
   },
   {
     name: "Sara Mohamed",
     role: "Head of Design",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sara&backgroundColor=ffd5dc",
+    avatar:
+      "https://api.dicebear.com/7.x/avataaars/svg?seed=Sara&backgroundColor=ffd5dc",
     bio: "Award-winning UI/UX designer with a passion for beautiful interfaces.",
   },
   {
     name: "Omar Hassan",
     role: "Lead Developer",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Omar&backgroundColor=c0aede",
+    avatar:
+      "https://api.dicebear.com/7.x/avataaars/svg?seed=Omar&backgroundColor=c0aede",
     bio: "Full-stack engineer building scalable e-commerce solutions.",
   },
   {
     name: "Nour Ali",
     role: "Customer Success",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Nour&backgroundColor=d1d4f9",
+    avatar:
+      "https://api.dicebear.com/7.x/avataaars/svg?seed=Nour&backgroundColor=d1d4f9",
     bio: "Dedicated to making every customer experience exceptional.",
   },
 ];
@@ -62,15 +66,16 @@ const values = [
 function About() {
   return (
     <div className="about_page">
-      {/* Hero */}
       <section className="page_hero">
         <div className="container">
           <h1>About Asharf Online Store</h1>
-          <p>We are passionate about bringing you the best products at unbeatable prices.</p>
+          <p>
+            We are passionate about bringing you the best products at unbeatable
+            prices.
+          </p>
         </div>
       </section>
 
-      {/* Story */}
       <section className="about_story">
         <div className="container">
           <div className="story_grid">
@@ -80,23 +85,28 @@ function About() {
                 <div className="line" style={{ margin: "14px 0 0" }}></div>
               </div>
               <p>
-                Founded in 2016, Asharf Online Store started as a small electronics boutique in Cairo. 
-                Our founder, Ahmed Ashraf, believed that everyone deserves access to premium products 
+                Founded in 2016, Asharf Online Store started as a small
+                electronics boutique in Cairo. Our founder, Ahmed Ashraf,
+                believed that everyone deserves access to premium products
                 without breaking the bank.
               </p>
               <p>
-                Over the years, we expanded from electronics to a full-fledged marketplace covering 
-                fashion, accessories, home goods, and much more — serving over 25,000 happy customers 
-                across Egypt and the Arab world.
+                Over the years, we expanded from electronics to a full-fledged
+                marketplace covering fashion, accessories, home goods, and much
+                more — serving over 25,000 happy customers across Egypt and the
+                Arab world.
               </p>
               <p>
-                Today, we are proud to be one of the most trusted online shopping destinations, known 
-                for our quality, fast delivery, and outstanding customer service.
+                Today, we are proud to be one of the most trusted online
+                shopping destinations, known for our quality, fast delivery, and
+                outstanding customer service.
               </p>
             </div>
             <div className="story_visual">
               <div className="visual_card">
-                <div className="visual_icon"><StorefrontIcon /></div>
+                <div className="visual_icon">
+                  <StorefrontIcon />
+                </div>
                 <h3>Asharf Online Store</h3>
                 <p>Delivering happiness since 2016</p>
                 <div className="visual_tags">
@@ -111,7 +121,6 @@ function About() {
         </div>
       </section>
 
-      {/* Stats */}
       <section className="about_stats">
         <div className="container">
           <div className="stats_grid">
@@ -126,7 +135,6 @@ function About() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
       <section className="about_mission">
         <div className="container">
           <div className="section_title">
@@ -139,25 +147,26 @@ function About() {
               <div className="mv_tag">🎯 Our Mission</div>
               <h3>Empower Every Shopper</h3>
               <p>
-                To provide an effortless, enjoyable, and trustworthy online shopping experience 
-                by curating the finest products from around the world and delivering them to your 
-                doorstep with speed and care.
+                To provide an effortless, enjoyable, and trustworthy online
+                shopping experience by curating the finest products from around
+                the world and delivering them to your doorstep with speed and
+                care.
               </p>
             </div>
             <div className="mv_card vision">
               <div className="mv_tag">🚀 Our Vision</div>
               <h3>Leading Regional E-Commerce</h3>
               <p>
-                To become the #1 e-commerce destination in the Arab world by 2028 — recognized 
-                for our innovation, customer obsession, and the incredible variety of products 
-                that cater to every lifestyle.
+                To become the #1 e-commerce destination in the Arab world by
+                2028 — recognized for our innovation, customer obsession, and
+                the incredible variety of products that cater to every
+                lifestyle.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
       <section className="about_values">
         <div className="container">
           <div className="section_title">
@@ -177,7 +186,6 @@ function About() {
         </div>
       </section>
 
-      {/* Team */}
       <section className="about_team">
         <div className="container">
           <div className="section_title">

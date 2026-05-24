@@ -1,9 +1,6 @@
 import React from "react";
-// متنساش تعمل امبورت لملف الـ CSS اللي فيه تنسيق المودال هنا
-// import './ConfirmModal.css';
 
 function ConfirmModal({ isOpen, onConfirm, onCancel }) {
-  // لو الـ isOpen بـ false، مش هيرجع حاجة (هيختفي)
   if (!isOpen) return null;
 
   return (

@@ -29,7 +29,6 @@ function BlogDetail() {
 
   return (
     <div className="blog_detail_page">
-      {/* Hero */}
       <div
         className="detail_hero"
         style={{ backgroundImage: `url(${post.image})` }}
@@ -56,7 +55,6 @@ function BlogDetail() {
         </div>
       </div>
 
-      {/* Content */}
       <div className="detail_content">
         <div className="container">
           <div className="detail_body">
@@ -88,7 +86,6 @@ function BlogDetail() {
             </div>
           </div>
 
-          {/* Related Posts */}
           {related.length > 0 && (
             <div className="related_posts">
               <h2 className="related_title">Related Articles</h2>

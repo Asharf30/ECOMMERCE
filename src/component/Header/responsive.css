@@ -1,13 +1,3 @@
-/* =============================================
-   RESPONSIVE STYLES — Desktop-first approach
-   Breakpoints: max-width 1023px (tablet), max-width 767px (mobile)
-   ============================================= */
-
-/* ——————————————————————————————
-   BASE / DESKTOP DEFAULTS
-   —————————————————————————————— */
-
-/* Hide mobile-only elements on desktop */
 .btm_header .mobile_top_bar {
   display: none;
 }
@@ -16,9 +6,6 @@
   display: none;
 }
 
-/* ——————————————————————————————
-   TABLET (max-width: 1023px)
-   —————————————————————————————— */
 @media (max-width: 1023px) {
   .container {
     width: 100%;
@@ -26,7 +13,6 @@
     padding-right: 1.5rem;
   }
 
-  /* Search bar — responsive stretch on tablet */
   .searchBox_container {
     flex: 1;
     min-width: 0;
@@ -44,18 +30,15 @@
     min-width: 0;
   }
 
-  /* Tighter nav padding */
   .btm_header .nav_links li {
     padding: 0 14px;
   }
 
-  /* Category nav narrower */
   .btm_header .category_nav {
     width: 185px;
     min-width: 185px;
   }
 
-  /* ---- Slider (tablet) ---- */
   .hero .mySwiper {
     min-height: 280px !important;
     overflow: hidden !important;
@@ -94,15 +77,10 @@
     display: block !important;
   }
 
-  /* ---- Product Grid (tablet: 3 columns) ---- */
   .productSwiper {
     --swiper-slides: 3;
   }
 }
-
-/* ——————————————————————————————
-   MOBILE (max-width: 767px)
-   —————————————————————————————— */
 @media (max-width: 767px) {
   .container {
     width: 100%;
@@ -110,10 +88,6 @@
     padding-right: 1rem;
   }
 
-  /* ==========================================
-     SLIDER DOTS — push dots down so they don't
-     stick to the content on mobile
-     ========================================== */
   .hero .mySwiper {
     padding-bottom: 36px !important;
   }
@@ -122,9 +96,6 @@
     bottom: 8px !important;
   }
 
-  /* ==========================================
-     TOP HEADER — two-row layout on mobile
-     ========================================== */
   .top_header .container {
     flex-wrap: wrap;
     gap: 8px;
@@ -139,7 +110,6 @@
     flex-shrink: 0;
   }
 
-  /* Search goes to its own full-width row */
   .searchBox_container {
     order: 3;
     flex: 1 1 100%;
@@ -171,14 +141,10 @@
     justify-content: center;
   }
 
-  /* Icons (heart + cart) stay on the same row as logo */
   .top_header .header-icons {
     flex-shrink: 0;
   }
 
-  /* ==========================================
-     BOTTOM HEADER — hamburger layout
-     ========================================== */
   .btm_header .container {
     flex-direction: column;
     height: auto;
@@ -187,7 +153,6 @@
     gap: 0;
   }
 
-  /* Show mobile bar (just the hamburger) */
   .btm_header .mobile_top_bar {
     display: flex;
     width: 100%;
@@ -196,7 +161,6 @@
     margin-bottom: 8px;
   }
 
-  /* Hamburger button */
   .btm_header .hamburger_btn {
     display: flex;
     align-items: center;
@@ -213,7 +177,6 @@
     background: rgba(255, 255, 255, 0.15);
   }
 
-  /* Category nav — full width on mobile */
   .btm_header .category_nav {
     display: block !important;
     width: 100% !important;
@@ -229,13 +192,12 @@
     border-radius: 8px;
   }
 
-  /* Nav: hidden until hamburger clicked */
   .btm_header .nav {
     position: absolute !important;
     top: 100% !important;
     left: 0 !important;
     width: 100% !important;
-    background: linear-gradient(135deg, #7c3aed, #ec4899) !important;
+    background: linear-gradient(135deg, #0369a1, #38bdf8) !important;
     z-index: 999 !important;
     display: flex !important;
     flex-direction: column !important;
@@ -279,9 +241,6 @@
     font-size: 16px;
   }
 
-  /* ==========================================
-     HERO SLIDER — mobile: show only text, hide image
-     ========================================== */
   .hero {
     padding-top: 10px;
     margin-bottom: 30px;
@@ -303,7 +262,6 @@
     overflow: hidden !important;
   }
 
-  /* Hide the product image on mobile — keeps slider clean */
   .hero .swiper-slide img.slider_img {
     display: none !important;
   }
@@ -339,15 +297,11 @@
     display: inline-flex !important;
   }
 
-  /* ==========================================
-     PRODUCT GRID — mobile: 2 columns
-     ========================================== */
   .products {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 12px !important;
   }
 
-  /* Product card smaller on mobile */
   .Product {
     max-width: 100%;
     padding: 14px 10px;
@@ -376,21 +330,15 @@
     font-size: 13px;
   }
 
-  /* Product swiper on mobile: 2 slides visible */
   .slide_products {
     padding: 0 10px;
   }
 
-  /* Favorites grid */
   .favorites_grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 12px !important;
   }
 }
-
-/* ——————————————————————————————
-   SMALL MOBILE (max-width: 400px)
-   —————————————————————————————— */
 @media (max-width: 400px) {
   .products {
     grid-template-columns: 1fr !important;

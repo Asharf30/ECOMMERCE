@@ -5,10 +5,10 @@
 @keyframes fadeInSlideDown {
   from {
     opacity: 0;
-    transform: translateY(-20px); /* بتبدأ من فوق */
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0); /* بتستقر في مكانها الطبيعي */
+    transform: translateY(0);
   }
 }

@@ -1,6 +1,3 @@
-/* ==============================
-   TOP HEADER
-   ============================== */
 .top_header {
   width: 100%;
   background-color: var(--color-white);
@@ -14,7 +11,7 @@ header {
   left: 0;
   right: 0;
   background-color: var(--color-white);
-  box-shadow: 0 2px 20px rgba(124, 58, 237, 0.08);
+  box-shadow: 0 2px 20px rgba(14, 165, 233, 0.08);
 }
 
 .top_header .container {
@@ -32,7 +29,6 @@ header {
   flex-shrink: 0;
 }
 
-/* Search */
 .top_header .container form input {
   padding: 5px 15px 5px 20px;
   width: 420px;
@@ -73,7 +69,6 @@ header {
   margin: 0 auto;
 }
 
-/* Icons */
 .top_header .header-icons {
   display: flex;
   gap: 15px;
@@ -109,9 +104,6 @@ header {
   line-height: 1;
 }
 
-/* ==============================
-   BOTTOM HEADER (NAVBAR)
-   ============================== */
 .btm_header {
   width: 100%;
   background: var(--gradient-hero);
@@ -126,7 +118,6 @@ header {
   gap: 0;
 }
 
-/* Category dropdown */
 .btm_header .category_nav {
   width: 230px;
   min-width: 230px;
@@ -167,7 +158,7 @@ header {
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   transition: 0.4s ease;
   z-index: 1000;
-  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.15);
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.15);
 }
 
 .btm_header .category_nav .category_list.active {
@@ -179,7 +170,9 @@ header {
   border-bottom: 1px solid var(--color-border-custom);
   font-size: 14px;
   color: var(--color-heading);
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
 .btm_header .category_nav .category_list a:hover {
@@ -188,7 +181,6 @@ header {
   padding-left: 24px;
 }
 
-/* Nav links */
 .btm_header .nav_links {
   display: flex;
   height: 100%;
@@ -214,7 +206,7 @@ header {
 
 .btm_header .nav_links li.active {
   background: rgba(255, 255, 255, 0.22);
-  box-shadow: inset 0 -3px 0 var(--color-secondary);
+  box-shadow: inset 0 -3px 0 #bae6fd;
 }
 
 .btm_header .nav_links li a {
@@ -228,7 +220,6 @@ header {
   padding: 0;
 }
 
-/* Desktop icons — hidden by default, shown only via responsive.css */
 .btm_header .header_icons {
   display: none;
   gap: 20px;
@@ -250,12 +241,10 @@ header {
   opacity: 0.8;
 }
 
-/* Mobile top bar */
 .btm_header .mobile_top_bar {
   display: none;
 }
 
-/* Hamburger button */
 .btm_header .hamburger_btn {
   display: none;
   align-items: center;
@@ -266,9 +255,6 @@ header {
   padding: 8px;
 }
 
-/* ==============================
-   SEARCH SUGGESTIONS
-   ============================== */
 .searchBox_container {
   position: relative;
   flex: 1;
@@ -282,7 +268,7 @@ header {
   width: 100%;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.15);
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.15);
   z-index: 1200;
   overflow: hidden;
   margin: 0;

@@ -13,13 +13,11 @@ export default function Cart() {
     0,
   );
 
-  // سحب clearCart من الكوونتكس (تم إضافة clearCart هنا)
   const { clearCart } = useContext(CartContext);
 
-  // الفانكشن اللي بتمسح وبتقفل الـ Popup مع بعض (تم تعديلها لتستخدم clearCart())
   const handleConfirmClear = () => {
-    clearCart(); // استخدام الدالة من الكونتكست
-    setIsModalOpen(false); // قفل البوب أب
+    clearCart();
+    setIsModalOpen(false);
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -76,10 +74,8 @@ export default function Cart() {
             <div className="button_div">
               <button type="submit">Checkout</button>
             </div>
-            {/* زرار مسح الكل اللي بيفتح الـ Popup */}
           </div>
         </div>
-        {/* استدعاء كومبوننت الـ Popup وبنبعتله الـ Props */}
         <ConfirmModal
           isOpen={isModalOpen}
           onConfirm={handleConfirmClear}

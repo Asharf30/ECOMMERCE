@@ -15,9 +15,6 @@
   border-radius: 4px;
 }
 
-/* ==============================
-   PRODUCT CARD
-   ============================== */
 .Product {
   width: 100%;
   max-width: 260px;
@@ -34,7 +31,7 @@
 
 .Product:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.15);
+  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.15);
   transform: translateY(-4px);
 }
 
@@ -92,7 +89,6 @@
   font-family: var(--font-dm);
 }
 
-/* Hover action icons */
 .Product .icons {
   position: absolute;
   top: 50%;
@@ -150,7 +146,6 @@
   color: var(--color-white);
 }
 
-/* "In Cart" badge */
 .Product .state_Cart {
   display: flex;
   justify-content: center;
@@ -165,7 +160,7 @@
   color: var(--color-primary);
   position: absolute;
   white-space: nowrap;
-  background: rgba(124, 58, 237, 0.08);
+  background: rgba(14, 165, 233, 0.08);
   padding: 4px 12px;
   border-radius: 20px;
 }
@@ -183,9 +178,6 @@
   box-sizing: border-box;
 }
 
-/* ==============================
-   TOAST
-   ============================== */
 .tost_wrapper {
   position: relative;
   width: 270px;
@@ -196,7 +188,7 @@
   border-radius: 12px;
   background-color: #fff;
   border: 1px solid var(--color-border-custom);
-  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.12);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.12);
 }
 
 .tost_wrapper img {
@@ -301,9 +293,6 @@
   }
 }
 
-/* ==============================
-   RESPONSIVE — Product Cards
-   ============================== */
 @media (max-width: 1023px) {
   .slide_products {
     padding: 0 30px;

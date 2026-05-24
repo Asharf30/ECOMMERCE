@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/set-state-in-effect */
-
 import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -58,7 +56,12 @@ function Search() {
           onSubmit={handelSubmit}
           className=" flex items-center bg-background rounded-4xl border border-primary outline-none"
         >
-          <input type="text" placeholder="Search..." value={searchTerm} onChange={change} />
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={change}
+          />
           <button type="submit">
             <SearchIcon style={{ fontSize: "22px", color: "white" }} />
           </button>

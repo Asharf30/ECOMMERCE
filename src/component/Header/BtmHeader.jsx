@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/set-state-in-effect */
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 import CloseIcon from "@mui/icons-material/Close";
@@ -12,7 +11,6 @@ export default function BtmHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Close everything on route change
   useEffect(() => {
     setCategoryOpen(false);
     setMobileMenuOpen(false);
@@ -35,7 +33,6 @@ export default function BtmHeader() {
   return (
     <div className="btm_header">
       <div className="container max-w-7xl mx-auto px-4">
-        {/* Mobile top bar — only visible on mobile */}
         <div className="mobile_top_bar">
           <button
             className="hamburger_btn"
@@ -51,7 +48,6 @@ export default function BtmHeader() {
           </button>
         </div>
 
-        {/* Category Browse */}
         <div className="category_nav">
           <div
             className="category_btn"
@@ -76,7 +72,6 @@ export default function BtmHeader() {
           </div>
         </div>
 
-        {/* Nav links */}
         <nav className={`nav ${mobileMenuOpen ? "mobile_open" : ""}`}>
           <ul className="nav_links">
             {NavLinks.map((item) => (
@@ -89,7 +84,6 @@ export default function BtmHeader() {
             ))}
           </ul>
         </nav>
-
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-/* Category & Search Results — product grid */
 .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -10,7 +9,6 @@
   padding-bottom: 60px;
 }
 
-/* Tablet */
 @media (max-width: 1023px) {
   .products {
     grid-template-columns: repeat(3, 1fr);
@@ -18,7 +16,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 767px) {
   .products {
     grid-template-columns: repeat(2, 1fr);
@@ -26,7 +23,6 @@
   }
 }
 
-/* Small mobile */
 @media (max-width: 400px) {
   .products {
     grid-template-columns: 1fr;

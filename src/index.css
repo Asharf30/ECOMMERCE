@@ -5,35 +5,25 @@
   --font-inter: "Inter", sans-serif;
   --font-dm: "DM Sans", sans-serif;
 
-  /* 🎨 الباليت الجديد — Purple + Amber */
-  --color-primary: #7C3AED;
-  /* بنفسجي رئيسي */
-  --color-primary-dark: #5B21B6;
-  /* بنفسجي داكن للـ hover */
-  --color-secondary: #F59E0B;
-  /* برتقالي ذهبي */
-  --color-accent: #EC4899;
-  /* وردي مميز */
-  --color-background: #F5F3FF;
-  /* خلفية فاتحة بنفسجية */
+  --color-primary: #0ea5e9;
+  --color-primary-dark: #0369a1;
+  --color-secondary: #f59e0b;
+  --color-accent: #38bdf8;
+  --color-background: #f0f9ff;
   --color-white: #ffffff;
-  --color-surface: #FFFFFF;
+  --color-surface: #ffffff;
 
-  /* ألوان النصوص */
-  --color-heading: #1E1B4B;
-  --color-paragraph: #6B7280;
+  --color-heading: #0f172a;
+  --color-paragraph: #64748b;
 
-  /* الحدود */
-  --color-border-custom: #DDD6FE;
+  --color-border-custom: #bae6fd;
 
-  /* الـ Gradients */
-  --gradient-hero: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
-  --gradient-btn: linear-gradient(135deg, #7C3AED, #A855F7);
-  --gradient-card: linear-gradient(135deg, #F5F3FF, #EDE9FE);
+  --gradient-hero: linear-gradient(135deg, #0369a1 0%, #38bdf8 100%);
+  --gradient-btn: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  --gradient-card: linear-gradient(135deg, #f0f9ff, #e0f2fe);
 }
 
 html {
-  /* Prevent smooth-scroll from fighting ScrollToTop on route change */
   scroll-behavior: auto;
 }
 
@@ -47,7 +37,6 @@ body {
   font-family: var(--font-inter);
   background-color: var(--color-background);
   color: var(--color-heading);
-  /* Never let body itself be a scroll container — scroll lives on window */
   overflow-x: hidden;
 }
 
@@ -82,9 +71,6 @@ a {
   padding-right: 1.5rem;
 }
 
-/* ==============================
-   BUTTONS
-   ============================== */
 .btn {
   padding: 11px 22px;
   width: fit-content;
@@ -99,17 +85,14 @@ a {
   transition: 0.3s;
   font-weight: 600;
   border: none;
-  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.35);
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
 }
 
-/* ==============================
-   PRODUCTS GRID (shared)
-   ============================== */
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -117,9 +100,6 @@ a {
   margin-top: 20px;
 }
 
-/* ==============================
-   PAGE HEADER (shared across pages)
-   ============================== */
 .page_hero {
   background: var(--gradient-hero);
   padding: 60px 0;
@@ -134,7 +114,11 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 60%
+  );
 }
 
 .page_hero h1 {
@@ -151,9 +135,6 @@ a {
   position: relative;
 }
 
-/* ==============================
-   SECTION TITLE (shared)
-   ============================== */
 .section_title {
   text-align: center;
   margin-bottom: 50px;
@@ -182,22 +163,16 @@ a {
   margin: 14px auto 0;
 }
 
-/* ==============================
-   UTILITY
-   ============================== */
 .badge {
   display: inline-block;
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
-  background: rgba(124, 58, 237, 0.1);
+  background: rgba(14, 165, 233, 0.1);
   color: var(--color-primary);
 }
 
-/* ==============================
-   RESPONSIVE - Tab & Mobile overrides
-   ============================== */
 @media (max-width: 1023px) {
   .container {
     padding-left: 1.5rem;

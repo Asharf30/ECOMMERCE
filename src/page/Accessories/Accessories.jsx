@@ -19,7 +19,7 @@ const CATEGORY_LABELS = {
   "womens-watches": "Women's Watches",
   "womens-bags": "Women's Bags",
   "womens-jewellery": "Jewellery",
-  "sunglasses": "Sunglasses",
+  sunglasses: "Sunglasses",
 };
 
 function Accessories() {
@@ -35,8 +35,10 @@ function Accessories() {
           ACCESSORIES_CATEGORIES.map((cat) =>
             axios
               .get(`https://dummyjson.com/products/category/${cat}`)
-              .then((res) => res.data.products.map((p) => ({ ...p, _cat: cat })))
-          )
+              .then((res) =>
+                res.data.products.map((p) => ({ ...p, _cat: cat })),
+              ),
+          ),
         );
         const combined = results.flat();
         setAllProducts(combined);
@@ -50,33 +52,40 @@ function Accessories() {
   }, []);
 
   const displayed = useMemo(() => {
-    let list = activeCategory === "all"
-      ? allProducts
-      : allProducts.filter((p) => p._cat === activeCategory);
+    let list =
+      activeCategory === "all"
+        ? allProducts
+        : allProducts.filter((p) => p._cat === activeCategory);
 
-    if (sortBy === "price-asc") list = [...list].sort((a, b) => a.price - b.price);
-    else if (sortBy === "price-desc") list = [...list].sort((a, b) => b.price - a.price);
-    else if (sortBy === "rating") list = [...list].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    if (sortBy === "price-asc")
+      list = [...list].sort((a, b) => a.price - b.price);
+    else if (sortBy === "price-desc")
+      list = [...list].sort((a, b) => b.price - a.price);
+    else if (sortBy === "rating")
+      list = [...list].sort((a, b) => (b.rating || 0) - (a.rating || 0));
 
     return list;
   }, [allProducts, activeCategory, sortBy]);
 
   return (
     <div className="accessories_page">
-      {/* Hero */}
       <section className="page_hero">
         <div className="container">
           <h1>Accessories Collection</h1>
-          <p>Discover watches, bags, jewellery, and sunglasses curated for every style.</p>
+          <p>
+            Discover watches, bags, jewellery, and sunglasses curated for every
+            style.
+          </p>
         </div>
       </section>
 
       <div className="container">
         <div className="accessories_layout">
-          {/* Sidebar */}
           <aside className="accessories_sidebar">
             <div className="sidebar_section">
-              <h3><FilterListIcon style={{ fontSize: 18 }} /> Filter by Category</h3>
+              <h3>
+                <FilterListIcon style={{ fontSize: 18 }} /> Filter by Category
+              </h3>
               <div className="cat_filters">
                 <button
                   id="cat-all"
@@ -101,11 +110,9 @@ function Accessories() {
                 ))}
               </div>
             </div>
-            </aside>
+          </aside>
 
-          {/* Products */}
           <div className="accessories_content">
-            {/* Sort bar */}
             <div className="acc_top_bar">
               <p className="acc_count">
                 Showing <strong>{displayed.length}</strong> products
@@ -127,8 +134,15 @@ function Accessories() {
             </div>
 
             {loading ? (
-              <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "40vh" }}>
-                <CircularProgress style={{ color: "#7C3AED" }} />
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  minHeight: "40vh",
+                }}
+              >
+                <CircularProgress style={{ color: "#0EA5E9" }} />
               </Box>
             ) : displayed.length === 0 ? (
               <div className="acc_empty">No products match your filters.</div>

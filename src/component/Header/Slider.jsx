@@ -1,12 +1,10 @@
 import React from "react";
-// import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import bannerHero1 from "../../Images/banner_Hero1.jpg";
 import bannerHero2 from "../../Images/banner_Hero2.jpg";
 import bannerHero3 from "../../Images/banner_Hero3.jpg";
 import "./Slider.css";
-// import "./responsive.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";

@@ -19,7 +19,7 @@ body {
   height: auto;
   background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 8px 40px rgba(124, 58, 237, 0.1);
+  box-shadow: 0 8px 40px rgba(14, 165, 233, 0.1);
   padding: 32px;
   box-sizing: border-box;
   display: flex;
@@ -35,7 +35,6 @@ body {
   font-family: var(--font-dm);
 }
 
-/* Clear all button */
 .clear_all_btn {
   align-self: flex-end;
   background: linear-gradient(135deg, #ef4444, #dc2626);
@@ -60,7 +59,6 @@ body {
   cursor: not-allowed;
 }
 
-/* Items list */
 .items {
   flex: 1;
   min-height: 0;
@@ -70,7 +68,7 @@ body {
   scrollbar-color: var(--color-border-custom) transparent;
 }
 
-.items>p {
+.items > p {
   margin: 0;
   padding: 40px 8px;
   color: var(--color-paragraph);
@@ -125,7 +123,6 @@ body {
   font-weight: 600;
 }
 
-/* Quantity controls */
 .qunatity_control {
   display: inline-flex;
   align-items: center;
@@ -166,7 +163,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Delete icon */
 .delet_icon {
   display: inline-flex;
   align-items: center;
@@ -176,7 +172,9 @@ body {
   border-radius: 8px;
   color: #e53935;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .delet_icon:hover {
@@ -184,7 +182,6 @@ body {
   color: #c62828;
 }
 
-/* Summary footer */
 .bottom_summruy {
   margin-top: 24px;
   padding-top: 20px;
@@ -227,18 +224,15 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.35);
   font-family: var(--font-dm);
 }
 
 .button_div button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5);
 }
 
-/* ==============================
-   MODAL
-   ============================== */
 .modal_overlay {
   position: fixed;
   inset: 0;
@@ -251,7 +245,7 @@ body {
 }
 
 .modal_box {
-  background: #1E1B4B;
+  background: #0f172a;
   color: white;
   width: 380px;
   max-width: 90%;
@@ -307,9 +301,6 @@ body {
   background: rgba(255, 255, 255, 0.06);
 }
 
-/* ==============================
-   RESPONSIVE
-   ============================== */
 @media (max-width: 768px) {
   .checkout {
     padding: 20px 10px;

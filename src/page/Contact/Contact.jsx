@@ -48,7 +48,12 @@ const subjects = [
 ];
 
 function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
@@ -56,10 +61,12 @@ function Contact() {
     const e = {};
     if (!form.name.trim()) e.name = "Name is required.";
     if (!form.email.trim()) e.email = "Email is required.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Invalid email address.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+      e.email = "Invalid email address.";
     if (!form.subject) e.subject = "Please select a subject.";
     if (!form.message.trim()) e.message = "Message is required.";
-    else if (form.message.trim().length < 20) e.message = "Message must be at least 20 characters.";
+    else if (form.message.trim().length < 20)
+      e.message = "Message must be at least 20 characters.";
     return e;
   };
 
@@ -81,20 +88,19 @@ function Contact() {
 
   return (
     <div className="contact_page">
-      {/* Hero */}
-
       <section className="page_hero">
         <div className="container">
           <h1>Get in Touch</h1>
-          <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+          <p>
+            We'd love to hear from you. Send us a message and we'll respond as
+            soon as possible.
+          </p>
         </div>
       </section>
 
-      {/* Main Content */}
       <section className="contact_main">
         <div className="container">
           <div className="contact_grid">
-            {/* Info Card */}
             <div className="contact_info_panel">
               <h2>Contact Information</h2>
               <p>Reach out through any of the channels below.</p>
@@ -115,27 +121,62 @@ function Contact() {
               <div className="social_links">
                 <p>Follow us on social media</p>
                 <div className="social_icons">
-                  <a href="#" id="social-facebook" aria-label="Facebook" className="social_icon"><FacebookIcon /></a>
-                  <a href="#" id="social-instagram" aria-label="Instagram" className="social_icon"><InstagramIcon /></a>
-                  <a href="#" id="social-twitter" aria-label="Twitter" className="social_icon"><TwitterIcon /></a>
-                  <a href="#" id="social-youtube" aria-label="YouTube" className="social_icon"><YouTubeIcon /></a>
+                  <a
+                    href="#"
+                    id="social-facebook"
+                    aria-label="Facebook"
+                    className="social_icon"
+                  >
+                    <FacebookIcon />
+                  </a>
+                  <a
+                    href="#"
+                    id="social-instagram"
+                    aria-label="Instagram"
+                    className="social_icon"
+                  >
+                    <InstagramIcon />
+                  </a>
+                  <a
+                    href="#"
+                    id="social-twitter"
+                    aria-label="Twitter"
+                    className="social_icon"
+                  >
+                    <TwitterIcon />
+                  </a>
+                  <a
+                    href="#"
+                    id="social-youtube"
+                    aria-label="YouTube"
+                    className="social_icon"
+                  >
+                    <YouTubeIcon />
+                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Form */}
             <div className="contact_form_panel">
               {submitted ? (
                 <div className="success_message">
                   <CheckCircleIcon style={{ fontSize: 60, color: "#10b981" }} />
                   <h3>Message Sent Successfully!</h3>
-                  <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                  <p>
+                    Thank you for contacting us. We'll get back to you within 24
+                    hours.
+                  </p>
                   <button className="btn" onClick={() => setSubmitted(false)}>
                     Send Another Message
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="contact_form" id="contact-form" noValidate>
+                <form
+                  onSubmit={handleSubmit}
+                  className="contact_form"
+                  id="contact-form"
+                  noValidate
+                >
                   <h2>Send Us a Message</h2>
 
                   <div className="form_row">
@@ -150,7 +191,9 @@ function Contact() {
                         placeholder="Your full name"
                         className={errors.name ? "error" : ""}
                       />
-                      {errors.name && <span className="error_msg">{errors.name}</span>}
+                      {errors.name && (
+                        <span className="error_msg">{errors.name}</span>
+                      )}
                     </div>
                     <div className="form_group">
                       <label htmlFor="email">Email Address *</label>
@@ -163,7 +206,9 @@ function Contact() {
                         placeholder="your@email.com"
                         className={errors.email ? "error" : ""}
                       />
-                      {errors.email && <span className="error_msg">{errors.email}</span>}
+                      {errors.email && (
+                        <span className="error_msg">{errors.email}</span>
+                      )}
                     </div>
                   </div>
 
@@ -178,10 +223,14 @@ function Contact() {
                     >
                       <option value="">Select a subject…</option>
                       {subjects.map((s) => (
-                        <option key={s} value={s}>{s}</option>
+                        <option key={s} value={s}>
+                          {s}
+                        </option>
                       ))}
                     </select>
-                    {errors.subject && <span className="error_msg">{errors.subject}</span>}
+                    {errors.subject && (
+                      <span className="error_msg">{errors.subject}</span>
+                    )}
                   </div>
 
                   <div className="form_group">
@@ -195,11 +244,19 @@ function Contact() {
                       placeholder="Write your message here…"
                       className={errors.message ? "error" : ""}
                     />
-                    {errors.message && <span className="error_msg">{errors.message}</span>}
-                    <div className="char_count">{form.message.length} / min 20 characters</div>
+                    {errors.message && (
+                      <span className="error_msg">{errors.message}</span>
+                    )}
+                    <div className="char_count">
+                      {form.message.length} / min 20 characters
+                    </div>
                   </div>
 
-                  <button type="submit" className="btn submit_btn" id="contact-submit">
+                  <button
+                    type="submit"
+                    className="btn submit_btn"
+                    id="contact-submit"
+                  >
                     Send Message <SendIcon style={{ fontSize: 18 }} />
                   </button>
                 </form>

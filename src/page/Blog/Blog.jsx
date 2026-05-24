@@ -24,7 +24,6 @@ function Blog() {
 
   return (
     <div className="blog_page">
-      {/* Hero */}
       <section className="page_hero">
         <div className="container">
           <h1>Our Blog</h1>
@@ -34,7 +33,6 @@ function Blog() {
         </div>
       </section>
 
-      {/* Filters */}
       <section className="blog_filters">
         <div className="container">
           <div className="filter_tabs">
@@ -52,7 +50,6 @@ function Blog() {
         </div>
       </section>
 
-      {/* Posts Grid */}
       <section className="blog_posts">
         <div className="container">
           <div className="posts_grid">

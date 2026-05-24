@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { CartContext } from "./CartContextObject";
 
 export default function CartProvider({ children }) {
-  // FAVIROTS
   const [FavriotItme, setFavriotItme] = useState(() => {
     const savedFavriot = localStorage.getItem("favriotItems");
     return savedFavriot ? JSON.parse(savedFavriot) : [];
@@ -24,7 +23,6 @@ export default function CartProvider({ children }) {
     localStorage.setItem("favriotItems", JSON.stringify(FavriotItme));
   }, [FavriotItme]);
 
-  // ***FAVIROTS***
   const [cartItems, setCartItems] = useState(() => {
     const savedCart = localStorage.getItem("cartItems");
     return savedCart ? JSON.parse(savedCart) : [];
@@ -54,17 +52,14 @@ export default function CartProvider({ children }) {
     setCartItems((prevItems) => [...prevItems, { ...item, quantity: 1 }]);
   };
 
-  // --- دالة مسح الكل - مضافة جديد ---
   const clearCart = () => {
     setCartItems([]);
   };
-  // ------------------------------------
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // السطر الذي سألت عنه! (isInCart) - راجع الصورة الثالثة للشرح المرئي
   return (
     <CartContext.Provider
       value={{
@@ -73,7 +68,7 @@ export default function CartProvider({ children }) {
         increaseQuantity,
         decreaseQuantity,
         removeFromCart,
-        clearCart, // دالة مسح الكل - مضافة جديد في الـ value
+        clearCart,
         addToFavriot,
         FavriotItme,
         removeFromFavriot,
