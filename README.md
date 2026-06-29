@@ -1,8 +1,20 @@
 # ECOMMERCE (React + Vite)
 
-A single-page e-commerce frontend built with React, Vite, React Router, MUI, Swiper, and Context API.
+A modern single-page e-commerce frontend built with React, Vite, and Tailwind CSS.
 
-Live Demo: [ecommerce-website-ashraf.netlify.app](https://ecommerce-website-ashraf.netlify.app/)
+Live Demo: [ecommerce-ashraf.vercel.app](https://ecommerce-ashraf.vercel.app/)
+
+## Technologies Used
+
+- **React 19**
+- **Vite**
+- **Tailwind CSS v4**
+- **Material UI (MUI)**
+- **React Router DOM**
+- **Axios** (for API data fetching)
+- **Swiper** (for image carousels and sliders)
+- **React Hot Toast** (for notifications)
+- **Context API** (for global state management like Cart and Favorites)
 
 ## Architecture
 
@@ -33,17 +45,9 @@ ECOMMERCE/
 │  └─ main.jsx                   # App bootstrap (Router + Providers)
 ├─ index.html
 ├─ package.json
+├─ vercel.json                   # Vercel SPA routing configuration
 └─ vite.config.js
 ```
-
-### Layers
-
-1. **Bootstrap layer**: `src/main.jsx` initializes React, router, and app-wide providers.
-2. **Application/route layer**: `src/App.jsx` defines route composition and persistent layout (header, toast, transitions).
-3. **Feature/page layer**: `src/page/**` contains route-level screens and page-specific orchestration.
-4. **UI component layer**: `src/component/**` contains reusable and feature-scoped presentational building blocks.
-5. **State layer**: `src/component/context/CartContext.jsx` centralizes cart/favorites state and localStorage sync.
-6. **Data access layer (co-located)**: API calls (`axios`) are currently made inside page components (`Home`, `CategoryPage`, `ProductDetalis`).
 
 ### Patterns used
 
