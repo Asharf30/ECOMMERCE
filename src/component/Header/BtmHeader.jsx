@@ -11,10 +11,12 @@ export default function BtmHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  useEffect(() => {
+  const [prevLocation, setPrevLocation] = useState(location);
+  if (location !== prevLocation) {
+    setPrevLocation(location);
     setCategoryOpen(false);
     setMobileMenuOpen(false);
-  }, [location]);
+  }
 
   useEffect(() => {
     fetch("https://dummyjson.com/products/categories")

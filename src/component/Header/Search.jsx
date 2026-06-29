@@ -45,10 +45,12 @@ function Search() {
     return () => clearTimeout(timeoutId);
   }, [searchTerm]);
 
-  useEffect(() => {
+  const [prevLocation, setPrevLocation] = useState(location);
+  if (location !== prevLocation) {
+    setPrevLocation(location);
     setSuggestion([]);
     setSearchTerm("");
-  }, [location]);
+  }
   return (
     <>
       <div className="searchBox_container">
